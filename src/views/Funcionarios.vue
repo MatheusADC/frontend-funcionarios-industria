@@ -42,7 +42,7 @@
       </tbody>
     </table>
 
-    <table v-else-if="tipoResultado === 'listaBruta'" class="tabela">
+    <table v-else-if="tipoResultado === 'listaOriginal'" class="tabela">
       <thead>
         <tr>
           <th>Nome</th>
@@ -123,7 +123,7 @@
 import api from '../services/api'
 
 const TIPO_POR_ITEM = {
-  item31: 'listaBruta',
+  item31: 'listaOriginal',
   item32: 'lista',
   item33: 'lista',
   item35: 'resumoFuncao',
@@ -156,7 +156,7 @@ export default {
       try {
         const { data } = await api.resetar()
         this.resultado = data
-        this.tipoResultado = 'lista'
+        this.tipoResultado = 'listaOriginal'
         this.tituloResultado = 'Dados resetados ao estado original'
       } catch (e) {
         this.erro = 'Erro ao resetar. Verifique se o backend está rodando.'
