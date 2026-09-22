@@ -147,7 +147,7 @@ export default {
     }
   },
   mounted() {
-    this.executar('item33', '3.3 - Imprimir todos')
+    this.executar('item31', '3.1 - Inserção dos funcionários')
   },
   methods: {
     async executarReset() {
