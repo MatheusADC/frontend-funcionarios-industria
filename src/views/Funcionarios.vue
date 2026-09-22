@@ -169,7 +169,6 @@ export default {
       this.tituloResultado = titulo
       try {
         if (chave === 'item34') {
-          // 3.4 tem formato especial: { funcionarios, mensagem }
           const { data } = await api.item34()
           this.resultado = data.funcionarios
           this.tipoResultado = 'lista'
